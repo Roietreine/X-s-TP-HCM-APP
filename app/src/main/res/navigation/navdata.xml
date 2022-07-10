@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navdata"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="rr.chrd.xosotphcm.dashboard.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_terminologyFragment"
+            app:destination="@id/terminologyFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_strategyFragment"
+            app:destination="@id/strategyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="rr.chrd.xosotphcm.history.presentation.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_strategyFragment"
+            app:destination="@id/strategyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/terminologyFragment"
+        android:name="rr.chrd.xosotphcm.terminology.presentation.TerminologyFragment"
+        android:label="fragment_terminology"
+        tools:layout="@layout/fragment_terminology" >
+        <action
+            android:id="@+id/action_terminologyFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_terminologyFragment_to_strategyFragment"
+            app:destination="@id/strategyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/strategyFragment"
+        android:name="rr.chrd.xosotphcm.strategy.presentation.StrategyFragment"
+        android:label="fragment_strategy"
+        tools:layout="@layout/fragment_strategy" >
+        <action
+            android:id="@+id/action_strategyFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_strategyFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_strategyFragment_to_terminologyFragment"
+            app:destination="@id/terminologyFragment" />
+    </fragment>
+</navigation>
